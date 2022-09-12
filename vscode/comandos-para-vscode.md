@@ -1,5 +1,10 @@
-# comandos para vscode
+# Comandos para vscode
 
+# Archivo de Markdown(MD)
+
+```
+nombredelarchivo + .md
+```
 - ## Cerrar menu lateral
 ```
 Ctrl + B
@@ -124,7 +129,7 @@ Ctrl + G y añadimos el numero de la linea
 Ctrl + Alt + P
 ```
 
-- # replace definition
+- # Replace definition
 
 ```
 F2 (al hacer esta acccion se cambiara un mismo nombre de uan seccion de codigo)
@@ -136,4 +141,15 @@ F2 (al hacer esta acccion se cambiara un mismo nombre de uan seccion de codigo)
 2. escribe snippet
 3. elegir configurar snippet
 4. selecciona el lenguaje
+```
+
+- # Cursor multiple en una palabra igual
+```
+Ctrl + D
+
+```
+
+- # Comentar codigo selecionado
+```
+Ctrl + Ç/}
 ```
