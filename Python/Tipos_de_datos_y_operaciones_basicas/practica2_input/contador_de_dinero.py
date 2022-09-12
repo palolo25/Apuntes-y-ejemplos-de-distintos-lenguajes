@@ -1,0 +1,25 @@
+gan_enero = int(input("Ganancias de Enero:"))
+gan_febrero = int(input("Ganancias de Febrero:"))
+gan_marzo = int(input("Ganancias de Marzo:"))
+gan_abril = int(input("Ganancias de Abril:"))
+gan_mayo = int(input("Ganancias de Mayo:"))
+gan_junio = int(input("Ganancias de Junio:"))
+gan_julio = int(input("Ganancias de Julio:"))
+gan_agosto = int(input("Ganancias de Agosto:"))
+gan_septiembre = int(input("Ganancias de Septiembre:"))
+gan_octubre = int(input("Ganancias de Octubre:"))
+gan_noviembre = int(input("Ganancias de Noviembre:"))
+gan_diciembre = int(input("Ganancias de Diciembre:"))
+
+gan_total = gan_enero + gan_febrero + gan_marzo + gan_abril +gan_mayo + gan_junio + gan_julio + gan_agosto + gan_septiembre + gan_octubre + gan_noviembre + gan_diciembre
+print("Las ganancias del año han sido de:", gan_total)
+gan_mediames = gan_total / 12
+print("La media mensual de ganancias ha sido de:", gan_mediames)
+impuestos_aplicadosIVA = gan_total - (gan_total * 21 / 100)
+print("Con el 21% de IVA aplicado se le quedan unas ganacias anuales de:",impuestos_aplicadosIVA)
+proposito_anual=(gan_total > 85000)
+print("Objetivo anual de cifra alcanzado:", proposito_anual)
+comprobacion_anual_libre_impuestos = (impuestos_aplicadosIVA > 60000)
+print("Este año hemos pasado el objetivo de dinero libre de impuestos:", comprobacion_anual_libre_impuestos)
+resultado = proposito_anual and comprobacion_anual_libre_impuestos
+print("Todos los objetivos cumplidos:",resultado)
