@@ -1,21 +1,21 @@
-- Git init: inicializar el repositorio
-- Git add nombre_de_archivo.extensión: agregar el archivo al repositorio
-- Git commit -m “Mensaje”: Agregamos los cambios para el repositorio
-- Git add: Agregar los cambios de la carpeta en la que nos encontramos agregar todo
-- Git status: visualizar cambios
-- Git log nombre_de_archivos.extensión: histórico de cambios con detalles
-- Git push: envía a otro repositorio remoto lo que estamos haciendo
-- Git pull: traer repositorio remoto
-- Ls: listado de carpetas en donde me encuentro. Es decir, como emplear dir en windows.
-- Pwd: ubicación actual
-- Mkdir: make directory nueva carpeta
-- Touch archivo.extensión: crear archivo vacío
-- Cat archivo.extensión: muestra el contenido del archivo
-- History: historial de comandos utilizados durante esa sesión
-- Rm archivo.extensión: Eliminación de archivo
-- Comando --help: ayuda sobre el comando
-- Git checkout: traer cambios realizados
-- Git rm --cached archivo.extensión: se utiliza para devolver el archivo que se tiene en ram. Cuando escribimos git add, lo devuelve a estado natural mientras está en staging.
-- Git config --list: muestra la lista de configuración de git
-- Git config --list --show-origin: rutas de acceso a la configuración de git
-- Git log archivo.extensión: muestra la historia del archivo
+ - # Git init: inicializar el repositorio
+ - # Git add nombre_de_archivo.extensión: agregar el archivo al repositorio
+ - # Git commit -m “Mensaje”: Agregamos los cambios para el repositorio
+ - # Git add: Agregar los cambios de la carpeta en la que nos encontramos agregar todo
+ - # Git status: visualizar cambios
+ - # Git log nombre_de_archivos.extensión: histórico de cambios con detalles
+ - # Git push: envía a otro repositorio remoto lo que estamos haciendo
+ - # Git pull: traer repositorio remoto
+ - # Ls: listado de carpetas en donde me encuentro. Es decir, como emplear dir en windows.
+ - # Pwd: ubicación actual
+ - # Mkdir: make directory nueva carpeta
+ - # Touch archivo.extensión: crear archivo vacío
+ - # Cat archivo.extensión: muestra el contenido del archivo
+ - # History: historial de comandos utilizados durante esa sesión
+ - # Rm archivo.extensión: Eliminación de archivo
+ - # Comando --help: ayuda sobre el comando
+ - # Git checkout: traer cambios realizados
+ - # Git rm --cached archivo.extensión: se utiliza para devolver el archivo que se tiene en ram. Cuando escribimos git add, lo devuelve a estado natural mientras está en staging.
+ - # Git config --list: muestra la lista de configuración de git
+ - # Git config --list --show-origin: rutas de acceso a la configuración de git
+ - # Git log archivo.extensión: muestra la historia del archivo
