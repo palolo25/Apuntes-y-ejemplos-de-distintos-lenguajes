@@ -42,8 +42,9 @@
   
   
   # Comandos para revisión y comparación en Github
-    ## Git status:
-     
+  
+  
+  ## Git status 
   - ### Visualizar cambios
   ## Git show
   - ### Cambios históricos y específicos hechos en un archivo.
