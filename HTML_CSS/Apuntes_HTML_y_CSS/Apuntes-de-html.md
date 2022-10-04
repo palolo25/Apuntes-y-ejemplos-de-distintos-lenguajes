@@ -341,7 +341,7 @@ Antes de HTML5, no había un estándar para reproducir archivos de audio en una 
     
   </audio>
 ```
-## El lemento de video 
+## El elemento de video 
 El elemento video es similar al elemento audio. Se puede especificar la URL de origen del video usando un atributo en un elemento de video, o usando elementos source dentro del elemento video.
 ```html
  <video autoplay controls loop width="500" height="200">
