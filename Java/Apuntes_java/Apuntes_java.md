@@ -124,3 +124,169 @@ System.out.println("hola mundo");
 Scanner sc = new Scanner(System.in);
 ```
 
+# Condicionales 
+
+- Los programas no tiene porque ejecutar siempre la misma secuencia de ordenes, se puede dar el caso en el que según el valor de alguna expresión o de alguna condición, puede interesar ejecutar o evitar ciertas sentencias. esta funcionalidad nos la proporcionan los if, if-else y swicht.
+
+# Expresiones lógicas
+- Una condición es el resultado de la evaluación de una expresión relacional y/o lógica, los valores de las condiciones son siempre de tipo booleano es decir **true** o **false** con los que se representa en java.
+- La diferencia entre un lógico y un relacional es que el lógico usa expresiones numéricas y el relacional usa expresiones booleanas, aun así ambos generan valores booleanos.
+
+# Operadores relacionales
+- Estos operadores son aquellos que comparan valores numérico para luego generar valores booleanos.
+![image.png](/.attachments/image-29a10c6c-260d-42bb-aef3-57dbef0fbf92.png)
+
+# operadores logicos 
+### Estos operadores se usan para condiciones mas complejas.
+- # Operador &&
+- Será cierto si ambos operando son ciertos.
+![image.png](/.attachments/image-dcdd51d7-5e81-4764-9776-1700ea917dc1.png)
+- # operador ||
+- Es cierto si cualquiera de los dos operandos es cierto. 
+![image.png](/.attachments/image-875590ed-b831-445d-bf85-65e855c2da47.png)
+- # Operador ! 
+- Cambia el valor al; que e aplica de true a false y viceversa. 
+![image.png](/.attachments/image-874a3ed3-e25f-4693-a8c4-360b383edcd6.png)
+
+# Condicional simple: if
+- Esta instrucción proporciona un control sobre el conjunto de instrucciones que se pueden ejecutar o no, dependiendo de la evaluación de la condición.
+ ![image.png](/.attachments/image-618e4317-1c35-4c0b-b85d-d5bf66a98088.png)
+
+# Condicional doble: if-else
+- En esta instrcuccion se especifican dos bloques de instrucciones en los cuales el primero se ejecutara cuando la condicion sea vedadera y el segundo se ejecutara cuando la condicion sea falsa, ambos bloque son mutuamente excluyentes lo que quiere decir que en cada ejecucion solo se hace uno de los dos.
+![image.png](/.attachments/image-9ef309d6-8874-4a4b-a242-0109ee744cf5.png)
+```java
+a= 5;
+if (a < 0){
+System.out.prinln("valor negativo");
+} else{
+System.out.println("valor positivo");
+}
+```
+
+# Operador ternario
+Este operador permite la seleccion del valor entre los dos posibles dependiendo de la evaluacion de una expresion segun sea true o false.
+```java
+if (expr) {
+variable = valor1;
+} else{
+variable = valor2;
+}
+```
+
+# Anidacion de condicionales 
+Cuando se tienen que realizar varias comprobaciones se pueden anidar tantos **if** o **if-else** como necesitemos, unos dentro de otros, esto hace que las comprobaciones sean excluyentes lo que hace que el codigo sea mas eficiente.
+```java
+int edad = 12;
+if (edad<13) {
+System.out.println("Infantil");
+}
+else {
+if (edad<18) {
+System.out.println("Adolescente");
+}
+else {
+if (edad<40) {
+System.out.println("Joven mayor de edad");
+}
+else {
+if (edad<65) {
+System.out.println("Adulto mayor de edad");
+}
+else {
+System.out.println("Jubilado");
+         }
+      }
+   } 
+}
+
+```
+# Condicional multiple: switch 
+- La opcion de usar varios **if-else** anidados deja de ser util cuando el codigo empieza a ser poco legiblepara estos casos disponemos de **switch**.
+```java
+int dia=3;
+switch (dia) {
+case 1:
+System.out.println("Hoy es lunes");
+break;
+case 2:
+System.out.println("Hoy es martes");
+break; 
+case 3:
+System.out.println("Hoy es miércoles");
+break; 
+case 4:
+System.out.println("Hoy es Jueves");
+break; 
+case 5:
+System.out.println("Hoy es Viernes");
+break; 
+case 6:
+System.out.println("Hoy es Sábado");
+break; 
+case 7:
+System.out.println("Hoy es Domingo");
+break; 
+default:
+System.out.println("El número " + dia + 
+" no es un dia de la semana");
+}
+```
+- Esta sentencia de java va evaluando los distintos casos hasta encontrar uno que se cumpla. 
+![image.png](/.attachments/image-58e01394-4a9c-43c1-b0b1-74471f11ccf1.png)
+- Con el switch es posible que varios **case** se ejecuten en el mismo codigo.
+```java
+public class Principal {
+public static void main(String[] args) {
+int valor=7;
+switch(valor) {
+ case 1:
+ case 2:
+ case 3:
+ 
+System.out.println("El valor es 1, 2 o 3");
+ break;
+ case 4:
+ case 5:
+ case 6:
+ 
+System.out.println("El valor es 4, 5 o 6");
+ break;
+
+ case 7:
+ case 8:
+ case 9:
+ System.out.println("El valor es 7, 8 o 9");
+ break;
+ default:
+ System.out.println("El valor de mayor que 9")
+}
+}
+}
+
+```
+- Ha parte de esto no siempre la variable o expresion a evaluar tiene que ser un entero.
+```java
+public class Principal {
+public static void main(String[] args) {
+char valor='b';
+switch(valor) {
+case 'a':
+System.out.println("El valor es a");
+break;
+case 'b':
+System.out.println("El valor es b");
+break;
+case 'c':
+System.out.println("El valor es c");
+break;
+case 'd':
+System.out.println("El valor es d");
+break;
+default:
+System.out.println("El valor es distinto de
+}
+}
+}
+
+```
