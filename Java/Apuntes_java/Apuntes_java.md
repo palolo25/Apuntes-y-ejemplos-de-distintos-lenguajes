@@ -78,7 +78,7 @@ public class conceptosBasicos {
 |Int|Entero|32 bits|de -2 147 483 648 a 2 147 483 647|
 |Long|Entero largo|64 bits|+- 9 223 372 036 854 775 808  |
 |Float|Real precision sencilla|32 bits|de -10³² a 10³²  |
-|Double|Real precision doble|64 bits| de -10 |
+|Double|Real precision doble|64 bits| de -10 y 10 |
 |Boolean|lógico|1 bit| true o false  |
 |Char|texto|16 bits|cualquier carácter  |
 # Constantes 
