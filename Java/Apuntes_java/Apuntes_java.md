@@ -133,28 +133,33 @@ Scanner sc = new Scanner(System.in);
 - La diferencia entre un lógico y un relacional es que el lógico usa expresiones numéricas y el relacional usa expresiones booleanas, aun así ambos generan valores booleanos.
 
 # Operadores relacionales
-- Estos operadores son aquellos que comparan valores numérico para luego generar valores booleanos.
-![image.png](/.attachments/image-29a10c6c-260d-42bb-aef3-57dbef0fbf92.png)
+- Estos operadores son aquellos que comparan valores numérico y cadenas para luego generar valores booleanos.
 
-# operadores logicos 
+![image.png](/Java/Apuntes_java/imagenes/Condicional/operador_relacional.png)
+
+# Operadores logicos 
 ### Estos operadores se usan para condiciones mas complejas.
 - # Operador &&
 - Será cierto si ambos operando son ciertos.
-![image.png](/.attachments/image-dcdd51d7-5e81-4764-9776-1700ea917dc1.png)
+
+![image.png](/Java/Apuntes_java/imagenes/Condicional/operador_logico_1.png)
 - # operador ||
 - Es cierto si cualquiera de los dos operandos es cierto. 
-![image.png](/.attachments/image-875590ed-b831-445d-bf85-65e855c2da47.png)
+
+![image.png](/Java/Apuntes_java/imagenes/Condicional/operador_logico_2.png)
 - # Operador ! 
 - Cambia el valor al; que e aplica de true a false y viceversa. 
-![image.png](/.attachments/image-874a3ed3-e25f-4693-a8c4-360b383edcd6.png)
+
+![image.png](/Java/Apuntes_java/imagenes/Condicional/operador_logico_3.png)
 
 # Condicional simple: if
 - Esta instrucción proporciona un control sobre el conjunto de instrucciones que se pueden ejecutar o no, dependiendo de la evaluación de la condición.
- ![image.png](/.attachments/image-618e4317-1c35-4c0b-b85d-d5bf66a98088.png)
+ 
+ ![image.png](/Java/Apuntes_java/imagenes/Condicional/condicional_simple_if.png)
 
 # Condicional doble: if-else
 - En esta instrcuccion se especifican dos bloques de instrucciones en los cuales el primero se ejecutara cuando la condicion sea vedadera y el segundo se ejecutara cuando la condicion sea falsa, ambos bloque son mutuamente excluyentes lo que quiere decir que en cada ejecucion solo se hace uno de los dos.
-![image.png](/.attachments/image-9ef309d6-8874-4a4b-a242-0109ee744cf5.png)
+![image.png](/Java/Apuntes_java/imagenes/Condicional/condicional_doble_if.png)
 ```java
 a= 5;
 if (a < 0){
@@ -167,14 +172,12 @@ System.out.println("valor positivo");
 # Operador ternario
 Este operador permite la seleccion del valor entre los dos posibles dependiendo de la evaluacion de una expresion segun sea true o false.
 ```java
-if (expr) {
-variable = valor1;
-} else{
-variable = valor2;
+public string IsLessThan(int candidate, int threshold) {
+    return candidate < threshold ? "Yes, It is!" : "No, It is not" ;
 }
 ```
 
-# Anidacion de condicionales 
+# Anidación de condicionales 
 Cuando se tienen que realizar varias comprobaciones se pueden anidar tantos **if** o **if-else** como necesitemos, unos dentro de otros, esto hace que las comprobaciones sean excluyentes lo que hace que el codigo sea mas eficiente.
 ```java
 int edad = 12;
@@ -233,7 +236,8 @@ System.out.println("El número " + dia +
 }
 ```
 - Esta sentencia de java va evaluando los distintos casos hasta encontrar uno que se cumpla. 
-![image.png](/.attachments/image-58e01394-4a9c-43c1-b0b1-74471f11ccf1.png)
+
+![image.png](/Java/Apuntes_java/imagenes/Condicional/condicional_switch.png)
 - Con el switch es posible que varios **case** se ejecuten en el mismo codigo.
 ```java
 public class Principal {
@@ -265,7 +269,7 @@ System.out.println("El valor es 4, 5 o 6");
 }
 
 ```
-- Ha parte de esto no siempre la variable o expresion a evaluar tiene que ser un entero.
+- A parte de esto no siempre la variable o expresion a evaluar tiene que ser un entero.
 ```java
 public class Principal {
 public static void main(String[] args) {
