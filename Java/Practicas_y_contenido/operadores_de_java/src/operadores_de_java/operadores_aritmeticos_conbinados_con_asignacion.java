@@ -1,7 +1,6 @@
 package operadores_de_java;
 
-
-public class operadores_aritmeticos_conbinados_con_asignación {
+public class operadores_aritmeticos_conbinados_con_asignacion {
 
     public static void main(String[] args) {
         
