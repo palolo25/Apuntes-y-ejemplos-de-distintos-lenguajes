@@ -1,10 +1,18 @@
 package introduccion_java;
 
+import java.util.Scanner;
+
 public class EntradaYsalidaDeDatos {
 
 	public static void main(String[] args) {
 		
-		System.out.println("hola mundo");
+		Scanner entrada = new Scanner(System.in);
+		
+		float numero ;
+		System.out.println("introduzaca un numero: ");
+		numero = entrada.nextFloat();
+		
+		System.out.println("El numero es: "+ numero);
 	}
 
 }
