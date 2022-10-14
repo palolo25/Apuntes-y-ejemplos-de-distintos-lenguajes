@@ -1,33 +1,7 @@
 body{
+background-color: aqua;
 
-    background-color: aqua;
-  }
-  #caja{
-  width: 280px;
-  height: 200px;
-  background-color: darkorange;
-  color: aqua;
-  font-size: 300%;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
-  ;
-  }
-  
-  .grupo{
-    width: 280px;
-  height: 200px;
-  background-color: aquamarine;
-  margin: 10px;
-  }
-  .grupo{
-    width: 280px;
-  height: 200px;
-  background-color: rgb(54, 31, 156);
-  margin: 10px;
-  }
-  .grupo{
-    width: 280px;
-  height: 200px;
-  background-color: rgb(255, 253, 254);
-  margin: 10px;
-  }
-  
+
+}
+
+   
