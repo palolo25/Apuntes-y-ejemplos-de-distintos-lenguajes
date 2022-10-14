@@ -13,7 +13,7 @@ public class clase_math {
         int raiz2 = (int)Math.sqrt(9);
         
         System.out.println(raiz2);
-       // como elebar a una potencia  
+       // como elevar a una potencia  
         double base = 5, exponente = 2;
         double resultado = Math.pow(base, exponente);
         
