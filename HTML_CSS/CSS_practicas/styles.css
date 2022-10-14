@@ -1,7 +1,23 @@
 body{
 background-color: aqua;
-
+font-size: larger;
 
 }
 
-   
+ h1,h2,h3,h4,h5,h6 {
+    color: blueviolet;
+ }  
+
+
+ p{
+    font-size:x-large;
+    font-family: 'Times New Roman', Times, serif;
+
+    
+ }
+
+ form{
+    background-color: rgb(16, 248, 8);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    
+ }
