@@ -8,4 +8,5 @@
 - Las carpetas están divididas según el contenido que quieras ver.
 - Hay un documento por carpeta que contiene los apuntes del lenguaje, para que puedas verlos a las vez que pruebas tu los ejemplos.
 
-# El repo todavía está en construcción 🚧, hay carpetas que todavía no tienen ningún contenido.Que no extrañe que estén vacías se van a ir rellenando según estén preparados los apuntes y las prácticas.
+# El repo sigue todavía en construcción 🚧 pero ya se añadieron apuntes de los lenguajes actuales del repo. Son apuntes básicos para empezar.
+
