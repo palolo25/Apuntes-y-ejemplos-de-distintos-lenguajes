@@ -161,11 +161,11 @@ Scanner sc = new Scanner(System.in);
 - En esta instrcuccion se especifican dos bloques de instrucciones en los cuales el primero se ejecutara cuando la condicion sea vedadera y el segundo se ejecutara cuando la condicion sea falsa, ambos bloque son mutuamente excluyentes lo que quiere decir que en cada ejecucion solo se hace uno de los dos.
 ![image.png](/Java/Apuntes_java/imagenes/Condicional/condicional_doble_if.png)
 ```java
-a= 5;
-if (a < 0){
-System.out.prinln("valor negativo");
-} else{
-System.out.println("valor positivo");
+a = 5;
+if (a < 0) {
+    System.out.prinln("valor negativo");
+} else {
+    System.out.println("valor positivo");
 }
 ```
 
@@ -207,32 +207,32 @@ System.out.println("Jubilado");
 # Condicional multiple: switch 
 - La opcion de usar varios **if-else** anidados deja de ser util cuando el codigo empieza a ser poco legiblepara estos casos disponemos de **switch**.
 ```java
-int dia=3;
+int dia = 3;
 switch (dia) {
-case 1:
-System.out.println("Hoy es lunes");
-break;
-case 2:
-System.out.println("Hoy es martes");
-break; 
-case 3:
-System.out.println("Hoy es miércoles");
-break; 
-case 4:
-System.out.println("Hoy es Jueves");
-break; 
-case 5:
-System.out.println("Hoy es Viernes");
-break; 
-case 6:
-System.out.println("Hoy es Sábado");
-break; 
-case 7:
-System.out.println("Hoy es Domingo");
-break; 
-default:
-System.out.println("El número " + dia + 
-" no es un dia de la semana");
+    case 1:
+        System.out.println("Hoy es lunes");
+        break;
+    case 2:
+        System.out.println("Hoy es martes");
+        break;
+    case 3:
+        System.out.println("Hoy es miércoles");
+        break;
+    case 4:
+        System.out.println("Hoy es Jueves");
+        break;
+    case 5:
+        System.out.println("Hoy es Viernes");
+        break;
+    case 6:
+        System.out.println("Hoy es Sábado");
+        break;
+    case 7:
+        System.out.println("Hoy es Domingo");
+        break;
+    default:
+        System.out.println("El número " + dia +
+            " no es un dia de la semana");
 }
 ```
 - Esta sentencia de java va evaluando los distintos casos hasta encontrar uno que se cumpla. 
@@ -241,56 +241,56 @@ System.out.println("El número " + dia +
 - Con el switch es posible que varios **case** se ejecuten en el mismo codigo.
 ```java
 public class Principal {
-public static void main(String[] args) {
-int valor=7;
-switch(valor) {
- case 1:
- case 2:
- case 3:
- 
-System.out.println("El valor es 1, 2 o 3");
- break;
- case 4:
- case 5:
- case 6:
- 
-System.out.println("El valor es 4, 5 o 6");
- break;
+    public static void main(String[] args) {
+        int valor = 7;
+        switch (valor) {
+            case 1:
+            case 2:
+            case 3:
 
- case 7:
- case 8:
- case 9:
- System.out.println("El valor es 7, 8 o 9");
- break;
- default:
- System.out.println("El valor de mayor que 9")
-}
-}
+                System.out.println("El valor es 1, 2 o 3");
+                break;
+            case 4:
+            case 5:
+            case 6:
+
+                System.out.println("El valor es 4, 5 o 6");
+                break;
+
+            case 7:
+            case 8:
+            case 9:
+                System.out.println("El valor es 7, 8 o 9");
+                break;
+            default:
+                System.out.println("El valor de mayor que 9")
+        }
+    }
 }
 
 ```
 - A parte de esto no siempre la variable o expresion a evaluar tiene que ser un entero.
 ```java
 public class Principal {
-public static void main(String[] args) {
-char valor='b';
-switch(valor) {
-case 'a':
-System.out.println("El valor es a");
-break;
-case 'b':
-System.out.println("El valor es b");
-break;
-case 'c':
-System.out.println("El valor es c");
-break;
-case 'd':
-System.out.println("El valor es d");
-break;
-default:
-System.out.println("El valor es distinto de
-}
-}
-}
+    public static void main(String[] args) {
+        char valor = 'b';
+        switch (valor) {
+            case 'a':
+                System.out.println("El valor es a");
+                break;
+            case 'b':
+                System.out.println("El valor es b");
+                break;
+            case 'c':
+                System.out.println("El valor es c");
+                break;
+            case 'd':
+                System.out.println("El valor es d");
+                break;
+            default:
+                System.out.println("El valor es distinto de
+                }
+        }
+    }
 
 ```
