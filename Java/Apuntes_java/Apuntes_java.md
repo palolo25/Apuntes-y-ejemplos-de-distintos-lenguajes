@@ -181,26 +181,22 @@ public string IsLessThan(int candidate, int threshold) {
 Cuando se tienen que realizar varias comprobaciones se pueden anidar tantos **if** o **if-else** como necesitemos, unos dentro de otros, esto hace que las comprobaciones sean excluyentes lo que hace que el codigo sea mas eficiente.
 ```java
 int edad = 12;
-if (edad<13) {
-System.out.println("Infantil");
-}
-else {
-if (edad<18) {
-System.out.println("Adolescente");
-}
-else {
-if (edad<40) {
-System.out.println("Joven mayor de edad");
-}
-else {
-if (edad<65) {
-System.out.println("Adulto mayor de edad");
-}
-else {
-System.out.println("Jubilado");
-         }
-      }
-   } 
+if (edad < 13) {
+    System.out.println("Infantil");
+} else {
+    if (edad < 18) {
+        System.out.println("Adolescente");
+    } else {
+        if (edad < 40) {
+            System.out.println("Joven mayor de edad");
+        } else {
+            if (edad < 65) {
+                System.out.println("Adulto mayor de edad");
+            } else {
+                System.out.println("Jubilado");
+            }
+        }
+    }
 }
 
 ```
