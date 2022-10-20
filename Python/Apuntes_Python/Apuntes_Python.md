@@ -55,6 +55,12 @@ print("silla, mesa!")
 # de una linea
 print("hola mundo")
  ```
+ - También puedes agregar un comentario de varias lineas introduciendolo entre triples comillas dobles ```"""Comentario"""```
+ ```python
+ """Comentario en varias lineas
+ en el que puedes poner todas las que quieras
+ """
+ ```
 # Variables en python
 
 - En Python, las variables se crean cuando le asignas un valor
