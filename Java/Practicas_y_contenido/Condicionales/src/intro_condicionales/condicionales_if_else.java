@@ -13,7 +13,7 @@ package intro_condicionales;
 
 import javax.swing.JOptionPane;
 
-public class if_else {
+public class condicionales_if_else {
 
     public static void main(String[] args) {
         
