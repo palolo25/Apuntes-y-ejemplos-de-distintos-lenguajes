@@ -17,6 +17,7 @@ public class DeterminarMultiploDe {
         else {
             JOptionPane.showMessageDialog(null, "El numero no es multiplo de 10");
         }
+        
     }
 
 }
