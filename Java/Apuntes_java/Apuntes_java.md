@@ -102,15 +102,16 @@ de
 - En java con su multitud de variables, constantes, numeros y otras expresiones, podemos realizar distintas operaciones.
 
 - Operador de asignacion(modifican el valor de una variable).
-![image.png](/.attachments/image-15659179-951c-465b-80ba-94ba234f4ae0.png)
+![image.png](/Java/Apuntes_java/imagenes/Conceptos%20b%C3%A1sicos/asignacion.png)
 - Operadores aritmeticos
-![image.png](/.attachments/image-4fd29345-a28e-4cac-a873-766a80b288b9.png)
+
+![image.png](/Java/Apuntes_java/imagenes/Conceptos%20b%C3%A1sicos/operadores.png)
 - Operadores relacionales 
  Son aquellos que dan un resultado logico o booleano a partir de las relaciones de expresiones numericas. estos valores se representan mediante los literales de true y false.
-![image.png](/.attachments/image-25cd5a93-c159-4574-9bb7-68bce0044a2b.png)
+![image.png](/Java/Apuntes_java/imagenes/Conceptos%20b%C3%A1sicos/operadores.png)
 - Operadores logicos
   Operan a partir de expresiones logicas(se usan las formas de **and**, **or** y **not**).
-![image.jng](/.attachments/image-cc78585c-8239-40f9-bba4-9b6bcb2646b1.jpg)
+![image.jng](/Java/Apuntes_java/imagenes/Conceptos%20b%C3%A1sicos/logicos.png)
 
 # API de java 
 - La gran ventaja de los lenguajes modernos es que disponen de una amplia biblioteca de componentes que realizan tareas complejas de forma transparente al programador uqe los utiliza facilitando su tarea. la existencia de esta herramientas facilita al programador, pero cuando no existen el programador tiene que desarrollarlas.
@@ -314,21 +315,21 @@ public class Principal {
 
 - **Ejemplo condición/accion**
 ```java
-int i=0;
-while (i<5) {
-i=i+1;
-System.out.println(i);
+int i = 0;
+while (i < 5) {
+    i = i + 1;
+    System.out.println(i);
 }
 
 ```
 - El bucle do-while es muy similar al while con la diferencia de que primero se ejecuta la instrucción y después se evalúa la condición. 
 - **ejemplo accion/condición**
 ```java
-int i=0;
+int i = 0;
 do {
-i=i+1;
-System.out.println(i);
-} while (i<5);
+    i = i + 1;
+    System.out.println(i);
+} while (i < 5);
 ```
 # Bucles controlados por for
 - Este bucle permite el control del numero de iteraciones mediante un contador. el bucle for esta controlado por una condicion. al ser configurable la inicializacion y el incremento permite determinar el numero de iteraciones que va a tener el bucle.
@@ -340,8 +341,8 @@ for (expresión de inicialización; condición; expresión de incremento) {
 - **ejemplo de un contador con for**
 ```java
 int i;
-for (i=1; i<=10; i++) {
-System.out.println(i);
+for (i = 1; i <= 10; i++) {
+    System.out.println(i);
 }
 System.out.println(i);
 ```
@@ -353,9 +354,74 @@ System.out.println(i);
 
 # Bucles anidados
 - Cuando usamos bucles es frecuente la anidacion de los mismos, que consiste en meter un bucle dentro de otro. cuando haces esto se multiplica el numero de veces que se ejecutan las instrucciones.
-![image.png](/.attachments/image-bbb3ff10-4b31-443c-ace8-50ab4db784fc.png)
+
+![image.png](/Java/Apuntes_java/imagenes/bucles/anidados.png)
 
 # Bucles independientes 
 - Cuando esto no dependen de otros anidados para deterrminar el numero de iteraciones se denominan independientes.
 # Bucles dependientes 
 - Podria darse el caso de que un bucle interno no sea independiente de la ejecucion de los externos y dependa de sus variables de control.
+
+# Bucle independientes
+
+- Cuando los bucles anidados no dependen, en absoluto, unos de otros para determinar el número de iteraciones, se denominan bucles anidados independientes. 
+
+```java
+for (i = 1; i <= 4; i++) {
+    for (j = 1; j <= 3; j++) {
+        System.out.println("Ejecutando.
+            .
+            ");
+        }
+    }
+
+```
+
+- El bucle externo, controlado por la variable i, realizará cuatro iteraciones, donde i toma los valores 1, 2, 3 y 4. El bucle interno, controlado por j, realizará tres iteraciones, tomando j los valores 1, 2 y 3.
+
+### ¿Cuántas veces se ejecutará la sentencia System. out printIn ("Ejecutando.." ) :?
+
+- Mientras el bucle externo está en su primera iteración (i vale 1), el bucle interno realiza sus 3 iteraciones; j toma los valores: 1, 2 y 3. Durante la segunda iteración del bucle externo (1 vale 2), el bucle interno realiza otras tres iteraciones, tomando de nuevo j los valores: 1, 2 y 3. Para las siguientes dos iteraciones del bucle externo, donde i toma los valores 3 y 4 consecutivamente, el bucle interno realizará de nuevo tres iteraciones en ambos casos.
+
+![image.png](/Java/Apuntes_java/imagenes/bucles/interno%20o%20externo.png)
+
+
+**Otro ejemplo**
+
+```java
+for (i = 1; i <= 2; i++) {
+    System.out printin("Bucle externo, i=" + i);
+    for (j = 1; j <= 3; j++) {
+        System.out.println("
+            ..Bucle medio, j = " + j):
+            for (k = 1; k <= 4; k++) {
+                System.out.printIn(" ....Bucle interno, k="  +  k);
+            }
+        }
+    }
+```
+
+
+# Bucles dependientes
+
+- Puede darse el caso que el número de iteraciones de un bucle interno no sea independiente de la ejecución de los bucles exteriores, y dependa de sus variables de control.
+- Decimos entonces que son bucles anidados dependientes. Veamos el siguiente fragmento de código, a modo de ejemplo, donde las variables utilizadas en el bucle externo (i) se toma como base para comparar con los valores de la variable (j) que controla el bucle más interno.
+
+```java
+for (1 = 1; 1 <= 3; i++) {
+    System.out.printin("Bucle externo, i=" + i);
+    j = 1;
+    while (j <= i) {
+        System.out printin("...Bucle interno, j=" + j);
+        j++;
+    }
+}
+
+```
+-  Durante la primera iteración del bucle i, el bucle interno realiza una sola iteración.
+
+- En la segunda iteración del bucle externo con i que vale 2, el bucle interno realiza dos iteraciones.
+
+- En la áltimo vuelto, cuando i vale 3, el bucle interno se ejecuta tres veces.
+
+- La variable i controla el número de iteraciones del bucle interno y resulta un total de 4 4 2 4 3 = 6 iteraciones. Los posibles cambios en el número de iteraciones de estos bucles hacen que a priori no sea tan fácil conocer el número total de iteraciones.
