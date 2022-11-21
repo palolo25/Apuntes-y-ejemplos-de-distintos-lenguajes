@@ -88,7 +88,15 @@ final int casa=10;
 ```
 # Comentarios
 - Estos comentarios sirven para describir la funcionalidad del codigo y facilitar la comprension de la solucion implementada. especialemnte hechos para facilitar el mantenimiento de un programa.
-![image.png](/.attachments/image-cbbab326-1cda-4580-9b07-8f29550d6049.png)
+```java
+/* Comentario
+de
+ multilinea*/
+ 
+// Comentario de una linea
+
+/**Este comentario sirve para la documentacion*/
+```
 
 # Operadores básicos
 - En java con su multitud de variables, constantes, numeros y otras expresiones, podemos realizar distintas operaciones.
@@ -290,3 +298,64 @@ public class Principal {
     }
 
 ```
+
+
+
+
+# Que es un bucle?
+- Un bucle es una estructura que contiene un bloque de instrucciones que se repite, cada ejecución es una iteración. el uso de bucles hace mas fácil la escritura los programas quitando el código duplicado.
+- ## Java dispone de los bucles for y while que son de tipo condicion-accion y el do-while que es accion-condicion.
+
+# Bucles controlados por condición
+- El numero de iteraciones se lleva a cabo mediante una condición, si es cierta el bucle hará otra iteración.
+
+# While y do-while
+ - Al igual que el comportamiento de **if**, *while* depende de la evaluación de una condición. este bucle llevara acabo una nueva iteración basándose en el valor del a condición.
+
+- **Ejemplo condición/accion**
+```java
+int i=0;
+while (i<5) {
+i=i+1;
+System.out.println(i);
+}
+
+```
+- El bucle do-while es muy similar al while con la diferencia de que primero se ejecuta la instrucción y después se evalúa la condición. 
+- **ejemplo accion/condición**
+```java
+int i=0;
+do {
+i=i+1;
+System.out.println(i);
+} while (i<5);
+```
+# Bucles controlados por for
+- Este bucle permite el control del numero de iteraciones mediante un contador. el bucle for esta controlado por una condicion. al ser configurable la inicializacion y el incremento permite determinar el numero de iteraciones que va a tener el bucle.
+```java
+for (expresión de inicialización; condición; expresión de incremento) {
+ Acciones del bucle
+}
+```
+- **ejemplo de un contador con for**
+```java
+int i;
+for (i=1; i<=10; i++) {
+System.out.println(i);
+}
+System.out.println(i);
+```
+# Salidas anticipadas
+- Segun la logica que queramos aplicar nos puede venir bien acabar con un bucle antes que finalice la condicion haciendo todas las iteraciones.
+- **break** finaliza completamente un bucle.
+- **continue** detiene la iteracion actual y continua con la siguiente.
+**ESTAS INSTRUCCIONES FUNCIONAN BIEN PERO ALGUNOS AUTORES RECOMIENDAN NO USARLOS YA QUE INTERFIEREN EN LA SECUENCIA NATURAL DE INSTRUCCIONES**
+
+# Bucles anidados
+- Cuando usamos bucles es frecuente la anidacion de los mismos, que consiste en meter un bucle dentro de otro. cuando haces esto se multiplica el numero de veces que se ejecutan las instrucciones.
+![image.png](/.attachments/image-bbb3ff10-4b31-443c-ace8-50ab4db784fc.png)
+
+# Bucles independientes 
+- Cuando esto no dependen de otros anidados para deterrminar el numero de iteraciones se denominan independientes.
+# Bucles dependientes 
+- Podria darse el caso de que un bucle interno no sea independiente de la ejecucion de los externos y dependa de sus variables de control.
