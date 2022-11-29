@@ -425,3 +425,41 @@ for (1 = 1; 1 <= 3; i++) {
 - En la áltimo vuelto, cuando i vale 3, el bucle interno se ejecuta tres veces.
 
 - La variable i controla el número de iteraciones del bucle interno y resulta un total de 4 4 2 4 3 = 6 iteraciones. Los posibles cambios en el número de iteraciones de estos bucles hacen que a priori no sea tan fácil conocer el número total de iteraciones.
+
+
+
+# Arreglos
+
+- Responda a una sencilla pregunta: ¿cuántos valores puede almacenar simultáneamente una variable? Según vimos en el primer capítulo, la respuesta es obvia: un solo valor en cada instante. Analicemos el siguiente código:
+edad = 6;
+edad = 23;
+- La variable edad inicialmente almacena el valor 6 y a continuación 23. Cada nueva asignación modifica edad, pero, independientemente del número de asignaciones, la variable contiene únicamente un valor en cada momento y se conoce como una variable escalar. ¿Existe una forma de almacenar más de un valor simultáneamente en una variable? La respuesta es sí, mediante el uso de tablas
+
+
+## ¿Que es un arreglo?
+- Un array (arreglo) en Java es una estructura de datos que nos permite almacenar un conjunto de datos de un mismo tipo. El tamaño de los arrays se declara en un primer momento y no puede cambiar luego durante la ejecución del programa.
+
+
+
+## Indices
+
+- El problema es cómo distinguir entre cada uno de los elementos o componentes que constituyen una tabla. En nuestro caso, ¿cómo podemos utilizar el valor 85 o el valor 19 que se encuentran almacenados en la tabla edad? La solución consiste en asignar un número de orden, llamado índice, a cada elemento, para así poder diferenciarlos. Al primer elemento se le asigna el índice 0, al segundo el índice 1 y así sucesivamente. Al último elemento le corresponde como índice el número total de elementos menos uno.
+- La forma de utilizar un elemento concreto de una tabla es a través del nombre de lavariable junto al número -índice- que distingue ese elemento entre corchetes ([ ]). Por ejemplo, para utilizar el cuarto elemento de edad elemento con indice 3- , escribiremos: edad [3], que contiene un valor de 23.
+
+![image.jpg](/Java/Apuntes_java/imagenes/arrays/primeracap.png)
+
+### indices fuera de rango
+
+- La variable edad es una tabla de 5 enteros. Ni que decir tiene que podemos utilizar cada uno de los 5 elementos que la componen, de la forma: edad [0], edad [1].. ., edad [4]. ¿Qué ocurrirá si utilizamos un índice que se encuentra fuera del rango de 0 a 4? Es decir, qué efecto produce escribir, edad [-2] edad [7]
+- Obtendremos un error en tiempo de ejecución que provoca que el programa termine de forma inesperada, ya que se detecta que los elementos asociados a los índices utilizados no existen.
+
+
+## Construccion de tablas
+
+- En el momento de crear una tabla tendremos que decidir qué tipo de datos vamos a almacenar y cuántos elementos necesitamos, declarar variables para tablas y crear la propia tabla.
+### Tamaño y tipo
+- Una tabla se define mediante dos características fundamentales: su tamaño y su tipo.
+
+- El tamaño o longitud es el número de elementos que componen una tabla. Y el tipo de una tabla es el de los datos que almacena en todos y cada uno de sus elementos. En la foto podemos ver dos tablas: la primera compuesta por tres elementos de tipo doble y la segundo por seis elementos de tipo entero.
+
+![image.jpg](/Java/Apuntes_java/imagenes/arrays/segundacap.png)
