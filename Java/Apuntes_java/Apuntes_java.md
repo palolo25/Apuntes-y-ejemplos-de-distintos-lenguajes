@@ -463,3 +463,13 @@ edad = 23;
 - El tamaño o longitud es el número de elementos que componen una tabla. Y el tipo de una tabla es el de los datos que almacena en todos y cada uno de sus elementos. En la foto podemos ver dos tablas: la primera compuesta por tres elementos de tipo doble y la segundo por seis elementos de tipo entero.
 
 ![image.jpg](/Java/Apuntes_java/imagenes/arrays/segundacap.png)
+
+
+# Matrices 
+
+## ¿Que es una matriz?
+
+- Una matriz en un arreglo bidimensional, necesita dos índices para acceder a sus elementos. Gráficamente podemos representar una matriz como una tabla de n filas y m columnas cuyos elementos son todos del mismo tipo. La siguiente figura representa un matriz M de 3 filas y 5 columnas:
+
+![image.jpg](/Java/Apuntes_java/imagenes/matrices/ejemplo.png)
+

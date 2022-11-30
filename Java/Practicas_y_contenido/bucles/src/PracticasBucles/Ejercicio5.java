@@ -9,23 +9,23 @@ import javax.swing.JOptionPane;
 
 public class Ejercicio5 {
 
-	public static void main(String[] args) {
-		
-		int numero,aleatorio,contador = 0;
-		aleatorio = (int) (Math.random()*100);
-		
-		do {
-			numero = Integer.parseInt(JOptionPane.showInputDialog("Escriba un numero: "));
-			if (aleatorio > numero) {
-				System.out.println("Escriba un numero mayor");
-			}else {
-				System.out.println("Escriba un numero menor");
-			}
-			contador++;
-		}while(numero!=aleatorio);
-		
-		System.out.println("\nPerfecto adivinaste el numero en tantos intentos: "+contador);
+    public static void main(String[] args) {
 
-	}
+        int numero, aleatorio, contador = 0;
+        aleatorio = (int)(Math.random() * 100);
+
+        do {
+            numero = Integer.parseInt(JOptionPane.showInputDialog("Escriba un numero: "));
+            if (aleatorio > numero) {
+                System.out.println("Escriba un numero mayor");
+            } else {
+                System.out.println("Escriba un numero menor");
+            }
+            contador++;
+        } while (numero != aleatorio);
+
+        System.out.println("\nPerfecto adivinaste el numero en tantos intentos: " + contador);
+
+    }
 
 }

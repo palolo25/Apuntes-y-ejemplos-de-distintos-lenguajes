@@ -8,18 +8,18 @@ import javax.swing.JOptionPane;
 
 public class Ejercicio4 {
 
-	public static void main(String[] args) {
-		
-		int numero, contador = 0;
-		
-		numero = Integer.parseInt(JOptionPane.showInputDialog("Escriba un numero: "));
-		
-		while(numero >= 0) {
-			contador++;
-			numero = Integer.parseInt(JOptionPane.showInputDialog("Escriba otro numero: "));
-		}
+    public static void main(String[] args) {
 
-		System.out.println("Usted ha introducido "+contador+" numeros" );
-	}
+        int numero, contador = 0;
+
+        numero = Integer.parseInt(JOptionPane.showInputDialog("Escriba un numero: "));
+
+        while (numero >= 0) {
+            contador++;
+            numero = Integer.parseInt(JOptionPane.showInputDialog("Escriba otro numero: "));
+        }
+
+        System.out.println("Usted ha introducido " + contador + " numeros");
+    }
 
 }
