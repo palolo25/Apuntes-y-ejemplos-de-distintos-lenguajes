@@ -1,4 +1,4 @@
-package Argumentos;
+package parametroYArgumentos;
 
 import javax.swing.JOptionPane;
 
