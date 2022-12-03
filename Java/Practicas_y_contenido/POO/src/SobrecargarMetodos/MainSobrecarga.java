@@ -14,5 +14,4 @@ public class MainSobrecarga {
 		p2.correr(15);
 
 	}
-
 }
