@@ -8,5 +8,6 @@
 - Las carpetas están divididas según el contenido que quieras ver.
 - Hay un documento por carpeta que contiene los apuntes del lenguaje, para que puedas verlos a las vez que pruebas tu los ejemplos.
 
-# El repo sigue todavía en construcción 🚧 pero ya se añadieron apuntes de los lenguajes actuales del repo. Son apuntes básicos para empezar.
+# El repo sigue todavía en construcción 🚧. El lenguaje java es de momneto el mas avanzado de todos seguido por python y js que estan en progreso.
+
 
