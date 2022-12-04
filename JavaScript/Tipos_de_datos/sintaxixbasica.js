@@ -27,3 +27,10 @@ let nombrepasa = 'Antonio';
 
 console.log(nombrePasa);
 console.log(nombrepasa);
+
+// Las variables no pueden empezar usando numeros solo estan permitido usar '_' o '$'
+
+let _prueba;
+let $prueba;
+let a1prueba;
+
