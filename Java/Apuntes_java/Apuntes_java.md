@@ -102,15 +102,20 @@ de
 - En java con su multitud de variables, constantes, numeros y otras expresiones, podemos realizar distintas operaciones.
 
 - Operador de asignacion(modifican el valor de una variable).
+
 ![image.png](/Java/Apuntes_java/imagenes/Conceptos%20b%C3%A1sicos/asignacion.png)
+
 - Operadores aritmeticos
 
 ![image.png](/Java/Apuntes_java/imagenes/Conceptos%20b%C3%A1sicos/operadores.png)
+
 - Operadores relacionales 
  Son aquellos que dan un resultado logico o booleano a partir de las relaciones de expresiones numericas. estos valores se representan mediante los literales de true y false.
+ 
 ![image.png](/Java/Apuntes_java/imagenes/Conceptos%20b%C3%A1sicos/operadores.png)
 - Operadores logicos
   Operan a partir de expresiones logicas(se usan las formas de **and**, **or** y **not**).
+  
 ![image.jng](/Java/Apuntes_java/imagenes/Conceptos%20b%C3%A1sicos/logicos.png)
 
 # API de java 
