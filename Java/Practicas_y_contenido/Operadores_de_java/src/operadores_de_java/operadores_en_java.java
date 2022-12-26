@@ -26,7 +26,7 @@ public class operadores_en_java {
 		System.out.println("La resta es: "+ resta);
 		System.out.println("La multiplicacion es igual a: "+ multiplicacion);
 		System.out.println("La division es igual a: "+ division);
-		System.out.println("El rtesto es: "+ resto);
+		System.out.println("El resto es: "+ resto);
 
 	}
 
