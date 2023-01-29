@@ -9,33 +9,35 @@ ellos
 package Cochebarato;
 
 public class Vehiculo {
-	
-	private String marca;
-	private String modelo;
-	private float precio;
-	
-	
-	public Vehiculo(String marca, String modelo, float precio) {
-		super();
-		this.marca = marca;
-		this.modelo = modelo;
-		this.precio = precio;
-	}
 
-	public float getPrecio() {
-		return precio;
-	}
+    private String marca;
+    private String modelo;
+    private float precio;
 
-	public void setPrecio(float precio) {
-		this.precio = precio;
-	}
-	
-	public String mostrarDatos() {
-		
-		return "Marca: "+marca+"\nModelo: "+modelo+"\nPrecio: "+precio+"\n";
-		
-	}
-	
-	
+
+    public Vehiculo(String marca, String modelo, float precio) {
+        super();
+        this.marca = marca;
+        this.modelo = modelo;
+        this.precio = precio;
+    }
+
+    public float getPrecio() {
+        return precio;
+    }
+
+    public void setPrecio(float precio) {
+        this.precio = precio;
+    }
+
+    public String mostrarDatos() {
+
+        return "Marca: " + marca + "\nModelo: " + modelo + "\nPrecio: " + precio + "\n";
+
+    }
+
+
 
 }
+
+
