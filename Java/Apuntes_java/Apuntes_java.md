@@ -478,3 +478,248 @@ edad = 23;
 
 ![image.jpg](/Java/Apuntes_java/imagenes/matrices/ejemplo.png)
 
+
+
+# POO
+
+- La programacion orientada a objetos es una forma especial de programar, mas cercano a como expresariamos las cosas en la vida real que otros tipos de programacion.
+ 
+ ## Clases 
+ - Un conjunto de objetos con caracteristicas similares.
+
+ ```java
+ package Introduccion;
+
+import javax.swing.JOptionPane;
+
+public class Operacion {
+//Atributos 
+	int numero1;
+	int numero2;
+	int suma;
+	int resta;
+	int multi;
+	int divi;
+	
+	
+//Metodos 
+// Metodo para pedir al usuario dos numeros 
+	
+	public void LeerNumeros() {
+		
+		numero1 = Integer.parseInt(JOptionPane.showInputDialog("Escriba un numero:"));
+		numero2 = Integer.parseInt(JOptionPane.showInputDialog("Escriba un numero:"));
+		
+	}
+	public void Sumar() {
+		suma = numero1 + numero2;
+	}
+	public void Restar() {
+		resta = numero1 - numero2;
+	}
+	public void Dividir() {
+		divi = numero1 / numero2;
+	}
+	public void Multiplicar() {
+		multi = numero1 * numero2;
+	}
+	public void MostrarResultados() {
+		System.out.println("El resultado de la suma es: "+ suma);
+		System.out.println("El resultado de la resta es: "+ resta);
+		System.out.println("El resultado de la division es: "+ divi);
+		System.out.println("El resultado de la multiplicacion es: "+ multi);
+	}
+}
+
+ ```
+## Su clase main
+ ```java
+ package Introduccion;
+
+public class MainOperacion {
+	
+	public static void main(String []args) {
+		
+		Operacion op = new Operacion();
+		
+		
+		op.LeerNumeros();
+		op.Sumar();
+		op.Restar();
+		op.Dividir();
+		op.Multiplicar();
+		op.MostrarResultados();
+		
+		
+	}
+
+}
+ ```
+ ## Concepto y creacion de métodos
+
+ - Un método es una accion o compotamiento de los objetos.
+
+
+ ## Métodos : retorno de valores 
+
+```java
+package EncapsulamientoYMetodoAccesor;
+
+public class Clase1 {
+
+	private int edad;
+	private String nombre;
+	
+	//Metodo Setter: Establece la edad
+	public void setEdad(int edad) {
+		this.edad = edad;
+	}
+	
+	// Metodo Getter: Mostramos la edad
+	public int getEdad() {
+		return edad;
+	}
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+	
+	
+}
+```
+## Su clase main
+```java
+package EncapsulamientoYMetodoAccesor;
+
+public class MainClases {
+
+	public static void main(String[] args) {
+		
+		Clase1 p1 = new Clase1();
+		
+		
+		p1.setEdad(15);
+		p1.setNombre("Pablo");
+		System.out.println("La edad es: "+ p1.getEdad());
+		System.out.println("Mi nombre es: "+ p1.getNombre());
+		
+	}
+
+}
+```
+
+# Método constructor
+
+- Un constructor es un método especial de una clase que se invoca siempre que se crea un objeto de una clase.
+
+- Cuando se crea un objeto ocurren tres cosas:
+
+1. Se asigna memoria para el objeto
+1. Se inicializa los atributos de ese objeto
+1. Se invoca al constructor de la clase que puede ser uno entre varios
+
+
+ ```java
+ package MetodoConstructor;
+
+public class Constructor {
+
+	//Atributos
+	String nombre;
+	int edad;
+	
+	//Metodos
+	
+	//Metodo constructor
+	public Constructor(String _nombre, int _edad) {
+		
+		nombre = _nombre;
+		edad = _edad;	
+	}
+	
+	//Otra forma de hacerlo 
+	//El this. hace diferencia entre atributo y parametro
+/*public Constructor(String nombre, int edad) {
+		
+		this.nombre = nombre;
+		this.edad = edad;	
+	}*/
+	
+	
+	public void mostrarDatos() {
+		
+		System.out.println("El nombre es: "+ nombre);
+		System.out.println("La edad es: "+ edad);
+	}
+}
+ ```
+
+ # Sobrecargar un método 
+
+ - La sobrecarga de Metodos es la creacion de varios metodos con el mismo nombre pero con diferente lista de parametros.
+
+ ```java
+ package SobrecargarMetodos;
+
+public class Sobrecarga {
+	
+	String nombre;
+	int edad;
+	String dni;
+	
+	//Metodos
+	public Sobrecarga(String nombre, int edad) {
+		super();
+		this.nombre = nombre;
+		this.edad = edad;
+	}
+
+	public Sobrecarga(String dni) {
+		super();
+		this.dni = dni;
+	}
+
+	
+	public void correr() {
+		System.out.println("Soy "+nombre+ " ,tengo "+edad+ " años y estoy en una carrera"+" y mi dni es "+dni);
+	}
+	public void correr(int km) {
+		System.out.println("He recorrido "+km+" kilometros");
+	}
+}
+ ```
+ # Main de la clase
+
+ ```java
+ package SobrecargarMetodos;
+
+public class MainSobrecarga {
+
+	public static void main(String[] args) {
+	
+		
+		Sobrecarga p1 = new Sobrecarga("pablo",21);
+		
+		p1.correr();
+		
+		Sobrecarga p2 = new Sobrecarga("1234567R");
+		
+		p2.correr(15);
+
+	}
+}
+ ```
+# Niveles de acceso a los miembros de una clase
+
+- En Java huy varios niveles de acceso a los miembros de una clase, es decir, a los atributos y métodos de una clase:
+- **Público (public)**. Se puede acceder a ese miembro desde cualquier otra clase de la aplicación.
+- **Privado (private)**. No se puede acceder a ese miembro desde ninguna otra clase.
+- **Protegido (protected)**. No se puede acceder a ese miembro desde ninguna otra clase, excepto las que pertenezcan al mismo paquete y las subclases, que sí podrán. 
+
+No especificado. Si no especificas el nivel de acceso, solo podrán acceder al miembro de la clase las clases del mismo paquete, pero no las
+subclases.
+
