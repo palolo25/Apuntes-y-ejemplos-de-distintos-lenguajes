@@ -4,7 +4,7 @@ public class MainAnimalCar {
 
 	public static void main(String[] args) {
 		
-		Planta planta = new Planta();
+		ISerVivo planta = new Planta();
 		AnimalCarnivoro animalc = new AnimalCarnivoro();
 		AnimalHervivoro animalh = new AnimalHervivoro();
 		
