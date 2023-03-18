@@ -1,5 +1,9 @@
 package practica;
-
+/**
+ * 
+ * @author psegu
+ *
+ */
 
 public class Empleado {
 
