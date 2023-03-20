@@ -197,3 +197,222 @@ x = str("s1") # x will be 's1'
 y = str(2)    # y will be '2'
 z = str(3.0)  # z will be '3.0'
 ```
+
+## Concatenacion
+
+En Python las matemáticas funcionan tanto con palabras como con números.
+ 
+Así que no sólo podemos añadir enteros y floats, sino también cadenas, utilizando algo llamado concatenación, que se puede hacer en dos cadenas cualesquiera.
+
+Las cadenas que contienen números se siguen añadiendo como cadenas y no como enteros.
+
+```python
+print("Spam" + 'eggs')
+print("2"+'2')
+```
+
+Tal vez no puedas sumar cadenas con números enteros, pero sí puedes multiplicar por ellos.
+ 
+Multiplicar una cadena por un entero, produce una versión repetida de la cadena original.
+
+```python
+print("spam" * 3)
+
+print(4 * '2')
+```
+
+
+# Estructuras de control de flujo
+
+Python admite estructuras de control de flujo como **if-else**, **while** y **for**. Aquí hay algunos ejemplos:
+
+```python
+# if-else
+x = 42
+if x < 0:
+    print("x es negativo")
+elif x == 0:
+    print("x es cero")
+else:
+    print("x es positivo")
+
+# while
+i = 0
+while i < 10:
+    print(i)
+    i += 1
+
+# for
+for i in range(10):
+    print(i)
+
+```
+
+## Sentencia if-else
+La sentencia **if-else** se usa para ejecutar un bloque de código si se cumple una determinada condición.
+
+```python
+x = 5
+
+if x > 0:
+    print("x es mayor que 0")
+elif x == 0:
+    print("x es igual a 0")
+else:
+    print("x es menor que 0")
+
+```
+
+## Bucle while
+El bucle **while** se utiliza para repetir un bloque de código mientras se cumple una determinada condición.
+```python
+x = 0
+
+while x < 5:
+    print(x)
+    x += 1
+
+```
+
+## Bucle for
+El bucle **for** se utiliza para iterar sobre una secuencia de elementos.
+
+```python
+nombres = ["Juan", "Maria", "Pedro"]
+
+for nombre in nombres:
+    print(nombre)
+```
+
+## Funciones
+En Python, una función es un bloque de código que realiza una tarea específica. Las funciones se definen con la palabra clave **def**.
+```python
+def factorial(n):
+    """
+    Calcula el factorial de un número utilizando la recursividad.
+    """
+    if n == 0:
+        return 1
+    else:
+        return n * factorial(n-1)
+
+```
+
+# POO
+
+## Clases en python
+
+En Python, una clase es una plantilla para crear objetos que tienen atributos y métodos en común. Para usar una clase, primero debes definirla y luego crear instancias de la misma.
+
+```python
+# Definir una clase "Persona"
+class Persona:
+    # Constructor para inicializar el objeto "Persona"
+    def __init__(self, nombre, edad):
+        self.nombre = nombre
+        self.edad = edad
+    
+    # Método para imprimir información sobre la persona
+    def informacion(self):
+        print("Mi nombre es", self.nombre, "y tengo", self.edad, "años.")
+
+# Crear una instancia de la clase "Persona"
+persona1 = Persona("Juan", 25)
+
+# Acceder a los atributos de la instancia
+print(persona1.nombre)
+print(persona1.edad)
+
+# Llamar al método "informacion" de la instancia
+persona1.informacion()
+
+```
+- En este ejemplo, primero definimos una clase llamada "Persona" con un constructor __init__ que inicializa los atributos "nombre" y "edad". También definimos un método llamado "informacion" que imprime información sobre la persona.
+
+- Luego, creamos una instancia de la clase "Persona" llamada "persona1" y le pasamos los valores "Juan" y 25 para los atributos "nombre" y "edad". Luego, accedemos a los atributos de la instancia usando la notación de punto (por ejemplo, persona1.nombre) y llamamos al método "informacion" de la instancia usando la misma notación de punto (persona1.informacion()).
+
+
+## Herencia en python
+
+La herencia es una característica clave de la programación orientada a objetos, y Python ofrece soporte completo para la herencia de clases.
+
+Para heredar una clase en Python, simplemente defina una nueva clase y haga que su declaración comience con el nombre de la clase de la cual desea heredar, seguido de paréntesis. Por ejemplo, si tiene una clase "Animal" y desea crear una clase "Perro" que herede de ella, la declaración de la clase "Perro" podría ser la siguiente:
+```python
+class Animal:
+    def __init__(self, nombre, edad):
+        self.nombre = nombre
+        self.edad = edad
+
+    def hacer_sonido(self):
+        print("Haciendo sonidos genéricos")
+
+class Perro(Animal):
+    def __init__(self, nombre, edad, raza):
+        super().__init__(nombre, edad)
+        self.raza = raza
+
+    def hacer_sonido(self):
+        print("Ladrando")
+
+    def __str__(self):
+        return f"{self.nombre} ({self.edad} años, {self.raza})"
+
+```
+En este ejemplo, la clase "Perro" hereda de la clase "Animal". La clase "Perro" tiene un método hacer_sonido() que sobrescribe el método con el mismo nombre en la clase "Animal". También tiene un método __str__() que devuelve una cadena que representa al perro.
+
+La llamada a super().__init__() en el constructor de la clase "Perro" llama al constructor de la clase "Animal", lo que le permite inicializar los atributos heredados. En este caso, "Perro" también tiene un atributo adicional, "raza".
+
+Para crear una instancia de la clase "Perro", simplemente use su constructor y proporcione los argumentos necesarios, incluyendo los que se requieren para el constructor heredado de la clase "Animal":
+
+```python
+mi_perro = Perro("Fido", 3, "Labrador")
+print(mi_perro) # salida: Fido (3 años, Labrador)
+mi_perro.hacer_sonido() # salida: Ladrando
+```
+## Organizacion de las clases 
+
+Comparado con otros lenguajes en python no es necesario tener varios documentos y que cada uno contenga una clase. 
+Un módulo de Python puede contener una o varias clases, funciones y variables. La idea es que todas estas cosas juntas tienen un propósito o funcionalidad común.
+
+Cuando trabajas con múltiples clases en un solo archivo de Python, generalmente se recomienda seguir una convención de nomenclatura para nombrar el archivo que contenga estas clases. La convención de nomenclatura es nombrar el archivo después de la clase principal en el archivo. Por ejemplo, si tienes una clase llamada Empleado, y otra clase llamada Departamento, y ambas están en un mismo archivo, entonces el archivo podría llamarse empresa.py.
+
+En resumen, no es necesario tener un documento por cada clase en Python, pero es importante seguir una convención de nomenclatura para nombrar el archivo que contenga múltiples clases, para que el código sea fácil de entender y mantener.
+
+## Importar en python
+
+La declaración de importación permite que un módulo o un archivo de Python importe el contenido de otro archivo de Python o módulo. Una vez que se ha importado un archivo o módulo, todas las funciones, clases y variables definidas en él están disponibles para su uso en el archivo actual.
+
+Hay varias maneras de importar código de un archivo de Python a otro archivo de Python. A continuación se presentan tres formas comunes de hacerlo:
+```python
+import nombre_del_modulo
+
+# Para usar cualquier función o clase en el módulo
+nombre_del_modulo.nombre_de_funcion()
+nombre_del_modulo.nombre_de_clase()
+```
+
+```python
+from nombre_del_modulo import nombre_de_funcion, nombre_de_clase
+
+# Para usar la función o clase importada
+nombre_de_funcion()
+nombre_de_clase()
+
+```
+
+```python
+import nombre_del_modulo as alias
+
+# Para usar cualquier función o clase en el módulo
+alias.nombre_de_funcion()
+alias.nombre_de_clase()
+
+# O
+
+from nombre_del_modulo import nombre_de_funcion as alias
+
+# Para usar la función importada con un alias
+alias()
+```
+Es importante tener en cuenta que el archivo de Python que se importa debe estar en el mismo directorio que el archivo que lo está importando o en un directorio en la variable de entorno PYTHONPATH. También es posible importar módulos o archivos de Python que están en una ruta de acceso específica utilizando el paquete sys de Python, pero esto es menos común.
+
