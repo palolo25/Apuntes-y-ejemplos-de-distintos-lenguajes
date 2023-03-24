@@ -12,4 +12,4 @@ profundidad = int(input("Escribe la profundidad: "))
 
 cubo1 = Cubo(ancho, alto , profundidad)
 
-print(f'El area del cubo es: {cubo1.calcular_cubo}')
+print(f'El area del cubo es: {cubo1.calcular_cubo()}')
