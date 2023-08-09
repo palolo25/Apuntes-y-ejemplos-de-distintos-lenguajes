@@ -56,6 +56,20 @@ public class Vuelo {
 		return listaPasajeros[i];
 	}
 	
+	public Pasajero getPasajero(String pasaporte) {
+		boolean encontrado = false;
+		int i = 0;
+		Pasajero pas = null;
+		
+		while ((encontrado == false)&&(i<listaPasajeros.length)){
+			if(pasaporte.equals(listaPasajeros[i].getPasaporte())) {
+				encontrado = true;
+				pas = listaPasajeros[i];
+			}
+			i++;
+		}
+		return pas;
+	}
 
 	
 	
