@@ -129,5 +129,68 @@ public class Main {
 	    // ... Repite el proceso para el Aeropuerto 4 ...
 	}
 
+	
+	public static void menu() {
+		
+		int opcion;
+		
+		do {
+			System.out.println("MENU DE OPCIONES");
+			System.out.println("1. VER AEROPUERTOS GESTIONADOS(PUBLICOS O PRIVADOS)");
+			System.out.println("2. VER EMPRESAS O SUBVENCIONES");
+			System.out.println("3. LISTA DE COMPAÑIAS DE UN AEROPUERTO");
+			System.out.println("4. LISTA DE VUELOS POR COMPAÑIA");
+			System.out.println("5. LISTAR POSIBLES VUELOS DE ORIGEN A DESTINO");
+			System.out.println("6. SALIR");
+			System.out.println("OPCION: ");
+			
+			opcion = entrada.nextInt();
+			
+			switch(opcion) {
+			case 1: 
+				System.out.println("");
+				
+				mostrarAeropuertos(aeropuerto);
+				break;
+			case 2: 
+				break;
+			case 3: 
+				break;	
+			case 4: 
+				break;	
+			case 5: 
+				break;
+			case 6: 
+				break;
+			default: System.out.println("ERROR DE OPCION, INTRODUZCA OTRA OPCION");	
+			
+			
+			}
+			
+			
+			
+			
+		}while(opcion!=6);
+	}
 
+	public static void mostrarAeropuertos(Aeropuerto aeropuertos[]) {
+		
+		for(int i=0;i<aeropuertos.length;i++) {
+			if(aeropuertos[i] instanceof AeropuertoPrivado) {
+				System.out.println("Aeropuerto Privado");
+				System.out.println("Nombre: " + aeropuertos[1].getNombre());
+				System.out.println("Ciudad: " + aeropuertos[i].getCiudad());
+				System.out.println("Pais: " + aeropuertos[i].getPais());
+				
+			}
+			else {
+				System.out.println("Aeropuerto Publico");
+				System.out.println("Nombre: " + aeropuertos[1].getNombre());
+				System.out.println("Ciudad: " + aeropuertos[i].getCiudad());
+				System.out.println("Pais: " + aeropuertos[i].getPais());
+				
+			}
+			System.out.println("");
+		}
+	}
 }
