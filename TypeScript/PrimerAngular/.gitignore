@@ -40,3 +40,21 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+# Node.js
+node_modules/
+
+# Angular
+/dist/
+/e2e/*.log
+/e2e/*.png
+
+# jQuery
+/jquery.slim.min.js
+/jquery.slim.min.js.map
+
+# Bootstrap
+/dist/css/bootstrap.min.css
+/dist/js/bootstrap.min.js
+
+# Popper.js
+/dist/umd/popper.min.js
