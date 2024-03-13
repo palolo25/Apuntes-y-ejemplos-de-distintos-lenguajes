@@ -6,7 +6,7 @@ document.querySelector('#dolar').addEventListener('click',function(){
 
 function obtenerDatos(){
     console.log('diste click')
-    let url = `https://mindicador.cl/api/euro`
+    const url = `https://mindicador.cl/api/euro`
 
     const api = new XMLHttpRequest();
     api.open('GET',url,true);

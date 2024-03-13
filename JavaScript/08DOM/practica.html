@@ -1,18 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Practica con el DOM/title>
+    <title>Practica con el DOM </title>
 </head>
+<style>
+    .azul{
+        color: blue;
+    }
+</style>
 <body>
     <h1 id="cabecero">Ejemplo1</h1>
     <p id="parrafo">Saludo Ejemplo1</p>
+    <p id="parrafo">nice to meet you</p>
+    <p class="azul">Heyyyy u oooooo</p>
+    <p class="azul">Heyyyy u oooooo</p>
+
+    <form id="formulario">
+        Nombre: <input type="text" name="nombre" value="Pablo">
+        <br>
+        Apellido: <input type="text" name="apellido" value="Garcia">
+    </form>
 
     <script>
-        let cabecero = document.getElementById('cabecero').innerHTML;
-        console.log('valor cabecera: '+ cabecero);
-        console.log('Hola java')
+        //let cabecero = document.getElementById('cabecero').innerHTML;//
+        //console.log(`valor cabecera: ${cabecero}`);
+        //let parrafo = document.getElementById('parrafo');
+        //console.log(`valor parrafo: ${parrafo.innerHTML}`);
+        let parrafos = document.getElementsByTagName('p');
+        console.log(`No. parrafos: ${parrafos.length}`)
+        for(let i=0; i<parrafos.length; i++){
+            console.log(`i:${i} - ${parrafos[i].innerHTML}`);
+        }
+
+        let parrafos2 = document.getElementsByClassName('azul');
+
+        function mostrarValores(){
+            let formulario = document.forms['formulario'];
+            let texto = '';
+            let nombre = formulario['nombre'];
+            let apellido = formulario['apellido'];
+
+            text = nombre.value + '<br/>' + apellido.value;
+           
+            document.getElementById('valores').innerHTML = texto;
+        }
+
+
     </script>
 </body>
 </html>
