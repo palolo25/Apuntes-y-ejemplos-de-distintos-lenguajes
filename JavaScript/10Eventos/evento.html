@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos</title>
+</head>
+<body onload="entrar()">
+    <h1 onclick="cambiarTexto(this)">TITULOOOOO</h1>
+   <br>
+   <br>
+   <br>
+   <h1 id="titulo2" onclick="cambiarText()">Buenas tardes mi armaaa</h1>
+
+   <div id="mostrar"></div>
+
+    <script>
+    function entrar(){
+        alert('Entrando a la web')
+        let texto = '';
+        if(navigator.cookieEnabled){
+            texto = 'cookies habilitadas'
+        }
+        else{
+            texto = 'Cookies no habilitadas'
+        }
+        document.getElementById('mostrar').innerHTML = texto;
+        function cambiarTexto(titulo){
+            console.log(titulo);
+            titulo.innerHTML = 'Cambiooo de Tituloo'
+            console.log(titulo);
+        }
+        
+        document.getElementById('titulo2').onclick = cambiarText;
+        function cambiarText(){
+            document.getElementById('titulo2').innerHTML = 'Todo bien mi armaaa';
+        }
+    }
+    </script>
+</body>
+</html>
