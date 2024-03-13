@@ -23,6 +23,10 @@
         Apellido: <input type="text" name="apellido" value="Garcia">
     </form>
 
+    <button onclick="mostrar()">Mostrar</button>
+    <h2 id="titulo"></h2>
+    <br>
+    <img id="imagen" src="http://globalmentoring.com.mx/imagenes/javascript.png" alt="foto">
     <script>
         //let cabecero = document.getElementById('cabecero').innerHTML;//
         //console.log(`valor cabecera: ${cabecero}`);
@@ -33,7 +37,7 @@
         for(let i=0; i<parrafos.length; i++){
             console.log(`i:${i} - ${parrafos[i].innerHTML}`);
         }
-        
+
         let parrafos2 = document.getElementsByClassName('azul');
 
         function mostrarValores(){
@@ -46,7 +50,10 @@
            
             document.getElementById('valores').innerHTML = texto;
         }
-
+        function mostrar(){
+            document.getElementById('titulo').innerHTML += '<br/>Nuevo Titulo';
+            document.getElementById('imagen').src = 'http://globalmentoring.com.mx/imagenes/html5.png';
+        }
 
     </script>
 </body>
