@@ -11,7 +11,7 @@ print(f'Objeto Persona 1: {persona1.nombre} {persona1.apellido} {persona1.edad}'
 persona1.nombre = 'Juan Carlos'
 persona1.apellido = 'Perez'
 persona1.edad = 25
-# os volvemos a imprimir 
+# Los volvemos a imprimir 
 print(f'Objeto Persona 1: {persona1.nombre} {persona1.apellido} {persona1.edad}')
 
 persona2 = Persona('Carla', 'Sanchez', 30)
