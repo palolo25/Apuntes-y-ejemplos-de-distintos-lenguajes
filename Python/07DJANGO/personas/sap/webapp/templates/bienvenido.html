@@ -1,11 +1,42 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bienvenidos</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1>Hola mundo Django</h1>
-</body>
+
+    <div>Numero de personas: {{no_personas}}</div>
+    <div>
+      <a href="nueva_persona"> Añadir Persona</a>
+    </div>
+    <div>
+      <table border="1">
+        <thead>
+          <tr>
+            <th>id</th>
+            <th>Nombre</th>
+            <th>Email</th>
+            <th></th>
+            <th></th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for persona in personas %}
+          <tr>
+            <td>{{ persona.id }}</td>
+            <td>{{ persona.nombre }} {{ persona.apellido}}</td>
+            <td>{{ persona.email }}</td>
+            <td><a href="detalle_persona/{{persona.id}}">ver</a></td>
+            <td><a href="editar_persona/{{persona.id}}">Editar</a></td>
+            <td><a href="eliminar_persona/{{persona.id}}">Eliminar</a></td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </body>
 </html>
